@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-02T16:48:45.531417-06:00",
+  "updated": "2026-03-02T17:55:40.155637-06:00",
   "regime": {
     "label": "RANGE-BOUND",
     "composite_raw": 0.1,
@@ -40,12 +40,12 @@
     }
   },
   "portfolio": {
-    "equity": 99915.98,
+    "equity": 99939.76,
     "cash": 85169.69,
-    "deployed": 14746.19,
+    "deployed": 14770.41,
     "day_pnl": 0.0,
     "day_pnl_pct": 0.0,
-    "total_pnl": -84.02,
+    "total_pnl": -60.24,
     "high_watermark": 100000,
     "inception": "2026-02-27"
   },
@@ -55,9 +55,9 @@
       "strategy": "Momentum (Gold)",
       "shares": 43,
       "entry": 115.7,
-      "current": 114.86,
-      "pnl": -36.12,
-      "pnl_pct": -0.73,
+      "current": 115.26,
+      "pnl": -19.01,
+      "pnl_pct": -0.38,
       "stop": 108.38,
       "target": 127.03
     },
@@ -66,9 +66,9 @@
       "strategy": "Momentum (Gold)",
       "shares": 135,
       "entry": 37.09,
-      "current": 36.75,
-      "pnl": -45.84,
-      "pnl_pct": -0.92,
+      "current": 36.79,
+      "pnl": -40.7,
+      "pnl_pct": -0.81,
       "stop": 34.07,
       "target": 41.37
     },
@@ -77,9 +77,9 @@
       "strategy": "Defense (Bonds)",
       "shares": 54,
       "entry": 89.78,
-      "current": 89.74,
-      "pnl": -2.06,
-      "pnl_pct": -0.04,
+      "current": 89.77,
+      "pnl": -0.54,
+      "pnl_pct": -0.01,
       "stop": 87.0,
       "target": 95.0
     }
@@ -337,15 +337,15 @@
   "market": {
     "SPY": {
       "price": 685.99,
-      "change_pct": -0.06
+      "change_pct": 0.0
     },
     "QQQ": {
       "price": 607.29,
-      "change_pct": -0.13
+      "change_pct": 0.0
     },
     "IWM": {
       "price": 261.41,
-      "change_pct": -0.91
+      "change_pct": 0.0
     },
     "VIX": {
       "price": 19.86,
@@ -353,15 +353,15 @@
     },
     "GLD": {
       "price": 483.75,
-      "change_pct": -1.28
+      "change_pct": 0.0
     },
     "TLT": {
       "price": 90.82,
-      "change_pct": 1.35
+      "change_pct": 0.0
     },
     "HYG": {
       "price": 80.72,
-      "change_pct": 0.55
+      "change_pct": 0.0
     }
   },
   "geo_alert": {
