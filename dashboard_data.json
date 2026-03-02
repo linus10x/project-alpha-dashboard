@@ -1,0 +1,633 @@
+{
+  "updated": "2026-03-02T16:48:45.531417-06:00",
+  "regime": {
+    "label": "RANGE-BOUND",
+    "composite_raw": 0.1,
+    "composite_adj": -0.1,
+    "geo_score": -0.96,
+    "geo_adj": -0.2,
+    "factors": {
+      "trend": {
+        "raw": 0.25,
+        "weight": 0.25,
+        "weighted": 0.063
+      },
+      "volatility": {
+        "raw": -0.33,
+        "weight": 0.2,
+        "weighted": -0.067
+      },
+      "momentum": {
+        "raw": 0.25,
+        "weight": 0.2,
+        "weighted": 0.05
+      },
+      "breadth": {
+        "raw": -0.33,
+        "weight": 0.15,
+        "weighted": -0.05
+      },
+      "credit": {
+        "raw": 0.0,
+        "weight": 0.1,
+        "weighted": 0.0
+      },
+      "correlation": {
+        "raw": 1.0,
+        "weight": 0.1,
+        "weighted": 0.1
+      }
+    }
+  },
+  "portfolio": {
+    "equity": 99915.98,
+    "cash": 85169.69,
+    "deployed": 14746.19,
+    "day_pnl": 0.0,
+    "day_pnl_pct": 0.0,
+    "total_pnl": -84.02,
+    "high_watermark": 100000,
+    "inception": "2026-02-27"
+  },
+  "positions": [
+    {
+      "ticker": "GDX",
+      "strategy": "Momentum (Gold)",
+      "shares": 43,
+      "entry": 115.7,
+      "current": 114.86,
+      "pnl": -36.12,
+      "pnl_pct": -0.73,
+      "stop": 108.38,
+      "target": 127.03
+    },
+    {
+      "ticker": "KGC",
+      "strategy": "Momentum (Gold)",
+      "shares": 135,
+      "entry": 37.09,
+      "current": 36.75,
+      "pnl": -45.84,
+      "pnl_pct": -0.92,
+      "stop": 34.07,
+      "target": 41.37
+    },
+    {
+      "ticker": "TLT",
+      "strategy": "Defense (Bonds)",
+      "shares": 54,
+      "entry": 89.78,
+      "current": 89.74,
+      "pnl": -2.06,
+      "pnl_pct": -0.04,
+      "stop": 87.0,
+      "target": 95.0
+    }
+  ],
+  "orders": [
+    {
+      "action": "SELL",
+      "ticker": "KGC",
+      "qty": 135,
+      "limit": 41.37,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "SELL",
+      "ticker": "GDX",
+      "qty": 43,
+      "limit": 127.03,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "BUY",
+      "ticker": "LMT",
+      "qty": 7,
+      "limit": 661.37,
+      "status": "new",
+      "notes": "limit"
+    }
+  ],
+  "signals": [
+    {
+      "ticker": "GLD",
+      "score": 9,
+      "max": 9,
+      "label": "STRONG BUY"
+    },
+    {
+      "ticker": "XLV",
+      "score": 8,
+      "max": 9,
+      "label": "STRONG BUY"
+    },
+    {
+      "ticker": "XLU",
+      "score": 8,
+      "max": 9,
+      "label": "STRONG BUY"
+    },
+    {
+      "ticker": "TLT",
+      "score": 6,
+      "max": 9,
+      "label": "STRONG BUY"
+    },
+    {
+      "ticker": "XLE",
+      "score": 5,
+      "max": 9,
+      "label": "BUY"
+    },
+    {
+      "ticker": "XLI",
+      "score": 5,
+      "max": 9,
+      "label": "BUY"
+    },
+    {
+      "ticker": "SPY",
+      "score": 2,
+      "max": 9,
+      "label": "LEAN BULL"
+    },
+    {
+      "ticker": "QQQ",
+      "score": 2,
+      "max": 9,
+      "label": "LEAN BULL"
+    },
+    {
+      "ticker": "XLK",
+      "score": 0,
+      "max": 9,
+      "label": "NEUTRAL"
+    },
+    {
+      "ticker": "XLY",
+      "score": 0,
+      "max": 9,
+      "label": "NEUTRAL"
+    },
+    {
+      "ticker": "XLF",
+      "score": -4,
+      "max": 9,
+      "label": "SELL"
+    }
+  ],
+  "momentum": [
+    {
+      "rank": 1,
+      "ticker": "GLD",
+      "score": 2.68
+    },
+    {
+      "rank": 2,
+      "ticker": "XLI",
+      "score": 1.12
+    },
+    {
+      "rank": 3,
+      "ticker": "XLE",
+      "score": 0.86
+    },
+    {
+      "rank": 4,
+      "ticker": "IWM",
+      "score": 0.84
+    },
+    {
+      "rank": 5,
+      "ticker": "XLB",
+      "score": 0.76
+    },
+    {
+      "rank": 6,
+      "ticker": "XLK",
+      "score": 0.72
+    },
+    {
+      "rank": 7,
+      "ticker": "XLU",
+      "score": 0.71
+    },
+    {
+      "rank": 8,
+      "ticker": "QQQ",
+      "score": 0.7
+    },
+    {
+      "rank": 9,
+      "ticker": "SPY",
+      "score": 0.65
+    },
+    {
+      "rank": 10,
+      "ticker": "XLF",
+      "score": -0.04
+    },
+    {
+      "rank": 11,
+      "ticker": "XLRE",
+      "score": -0.04
+    },
+    {
+      "rank": 12,
+      "ticker": "TLT",
+      "score": -0.09
+    }
+  ],
+  "circuit_breakers": [
+    {
+      "name": "Daily Loss",
+      "threshold": "-2%",
+      "current": "0.00%",
+      "clear": true
+    },
+    {
+      "name": "Weekly Loss",
+      "threshold": "-5%",
+      "current": "0.00%",
+      "clear": true
+    },
+    {
+      "name": "Monthly Loss",
+      "threshold": "-8%",
+      "current": "0.00%",
+      "clear": true
+    },
+    {
+      "name": "Max Drawdown",
+      "threshold": "-15%",
+      "current": "0.00%",
+      "clear": true
+    },
+    {
+      "name": "Correlation",
+      "threshold": "0.80",
+      "current": "0.07",
+      "clear": true
+    },
+    {
+      "name": "Volatility",
+      "threshold": "24%",
+      "current": "12.7%",
+      "clear": true
+    },
+    {
+      "name": "Liquidity",
+      "threshold": "2%",
+      "current": "OK",
+      "clear": true
+    },
+    {
+      "name": "Regime Conf",
+      "threshold": "<40%",
+      "current": "OK",
+      "clear": true
+    },
+    {
+      "name": "Kill Switch",
+      "threshold": "ON",
+      "current": "OFF",
+      "clear": true
+    }
+  ],
+  "allocation": [
+    {
+      "strategy": "Momentum",
+      "current": 9.7,
+      "target": 20,
+      "action": "Add XLE, XLI, AEM positions"
+    },
+    {
+      "strategy": "Mean Reversion",
+      "current": 0,
+      "target": 28,
+      "action": "Wait for Z>2.0 signals"
+    },
+    {
+      "strategy": "Defense",
+      "current": 4.9,
+      "target": 15,
+      "action": "TLT active, add SPY puts"
+    },
+    {
+      "strategy": "Options Income",
+      "current": 0,
+      "target": 12,
+      "action": "KGC covered call ready"
+    },
+    {
+      "strategy": "Opportunistic",
+      "current": 0,
+      "target": 10,
+      "action": "FRO, PANW setups"
+    },
+    {
+      "strategy": "Cash/T-Bills",
+      "current": 85.3,
+      "target": 15,
+      "action": "Deploy ~70% per targets"
+    }
+  ],
+  "market": {
+    "SPY": {
+      "price": 685.99,
+      "change_pct": -0.06
+    },
+    "QQQ": {
+      "price": 607.29,
+      "change_pct": -0.13
+    },
+    "IWM": {
+      "price": 261.41,
+      "change_pct": -0.91
+    },
+    "VIX": {
+      "price": 19.86,
+      "change_pct": null
+    },
+    "GLD": {
+      "price": 483.75,
+      "change_pct": -1.28
+    },
+    "TLT": {
+      "price": 90.82,
+      "change_pct": 1.35
+    },
+    "HYG": {
+      "price": 80.72,
+      "change_pct": 0.55
+    }
+  },
+  "geo_alert": {
+    "active": true,
+    "level": "EXTREME",
+    "score": -0.96,
+    "headline": "US-Iran conflict active. Strait of Hormuz disrupted. Oil tanker struck. Regime adjustment: -0.20"
+  },
+  "crypto": {
+    "regime": "MINIMAL",
+    "BTC": 65880,
+    "ETH": 1930,
+    "recommendation": "100% USDC"
+  },
+  "tax_liens": {
+    "total_deployed": 50000,
+    "annual_interest": 11872.0,
+    "avg_risk": 1.5,
+    "state_count": 6,
+    "states": [
+      "FL",
+      "GA",
+      "IA",
+      "IL",
+      "IN",
+      "MD"
+    ],
+    "unrealized_pnl": 0,
+    "liens": [
+      {
+        "id": "TL-0001",
+        "state": "IA",
+        "county": "Polk County",
+        "amount": 3800,
+        "rate": 0.24,
+        "annual_interest": 912.0,
+        "risk": 1.5,
+        "ltv": 0.0205,
+        "redemption": "2028-06-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0002",
+        "state": "IA",
+        "county": "Linn County",
+        "amount": 3200,
+        "rate": 0.24,
+        "annual_interest": 768.0,
+        "risk": 1.5,
+        "ltv": 0.0194,
+        "redemption": "2028-06-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0003",
+        "state": "IA",
+        "county": "Scott County",
+        "amount": 2900,
+        "rate": 0.24,
+        "annual_interest": 696.0,
+        "risk": 1.5,
+        "ltv": 0.02,
+        "redemption": "2028-06-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0004",
+        "state": "IA",
+        "county": "Black Hawk County",
+        "amount": 3200,
+        "rate": 0.24,
+        "annual_interest": 768.0,
+        "risk": 1.5,
+        "ltv": 0.0256,
+        "redemption": "2028-06-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0005",
+        "state": "GA",
+        "county": "Chatham County",
+        "amount": 3400,
+        "rate": 0.2,
+        "annual_interest": 680.0,
+        "risk": 1.5,
+        "ltv": 0.0174,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0006",
+        "state": "GA",
+        "county": "Bibb County",
+        "amount": 3200,
+        "rate": 0.2,
+        "annual_interest": 640.0,
+        "risk": 1.5,
+        "ltv": 0.0237,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0007",
+        "state": "GA",
+        "county": "Richmond County",
+        "amount": 3200,
+        "rate": 0.2,
+        "annual_interest": 640.0,
+        "risk": 1.5,
+        "ltv": 0.0221,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0008",
+        "state": "FL",
+        "county": "Marion County",
+        "amount": 2800,
+        "rate": 0.18,
+        "annual_interest": 504.0,
+        "risk": 1.5,
+        "ltv": 0.0197,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0009",
+        "state": "FL",
+        "county": "Lake County",
+        "amount": 2600,
+        "rate": 0.18,
+        "annual_interest": 468.0,
+        "risk": 1.5,
+        "ltv": 0.0155,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0010",
+        "state": "FL",
+        "county": "Pasco County",
+        "amount": 2500,
+        "rate": 0.18,
+        "annual_interest": 450.0,
+        "risk": 1.5,
+        "ltv": 0.0161,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0011",
+        "state": "MD",
+        "county": "Baltimore County",
+        "amount": 3600,
+        "rate": 0.24,
+        "annual_interest": 864.0,
+        "risk": 1.5,
+        "ltv": 0.016,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0012",
+        "state": "MD",
+        "county": "Prince George's County",
+        "amount": 3400,
+        "rate": 0.24,
+        "annual_interest": 816.0,
+        "risk": 1.5,
+        "ltv": 0.0124,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0013",
+        "state": "IN",
+        "county": "Marion County",
+        "amount": 3400,
+        "rate": 0.25,
+        "annual_interest": 850.0,
+        "risk": 1.5,
+        "ltv": 0.0206,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0014",
+        "state": "IN",
+        "county": "Lake County",
+        "amount": 3200,
+        "rate": 0.25,
+        "annual_interest": 800.0,
+        "risk": 1.5,
+        "ltv": 0.0337,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0015",
+        "state": "IL",
+        "county": "Will County",
+        "amount": 2900,
+        "rate": 0.36,
+        "annual_interest": 1044.0,
+        "risk": 1.5,
+        "ltv": 0.0138,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      },
+      {
+        "id": "TL-0016",
+        "state": "IL",
+        "county": "St. Clair County",
+        "amount": 2700,
+        "rate": 0.36,
+        "annual_interest": 972.0,
+        "risk": 1.5,
+        "ltv": 0.02,
+        "redemption": "2028-05-15",
+        "status": "VIRTUAL_HOLDING"
+      }
+    ]
+  },
+  "predictions": {
+    "value": 10000,
+    "cash": 9200.36,
+    "deployed": 799.64,
+    "pnl": 0,
+    "win_rate": "\u2014",
+    "positions": [
+      {
+        "ticker": "KXINX-26MAR02H1600-T6550",
+        "title": "Will the S&P 500 be below 6550 on Mar 2, 2026 at 4pm EST?",
+        "side": "NO",
+        "contracts": 222,
+        "entry": 90,
+        "cost": 199.8,
+        "status": "open"
+      },
+      {
+        "ticker": "KXFED-27JAN-T3.50",
+        "title": "Will the upper bound of the federal funds rate be above 3.50% following the Fed'",
+        "side": "YES",
+        "contracts": 952,
+        "entry": 21.0,
+        "cost": 199.92,
+        "status": "open"
+      },
+      {
+        "ticker": "KXFED-27JAN-T3.25",
+        "title": "Will the upper bound of the federal funds rate be above 3.25% following the Fed'",
+        "side": "YES",
+        "contracts": 625,
+        "entry": 32.0,
+        "cost": 200.0,
+        "status": "open"
+      },
+      {
+        "ticker": "KXFED-27MAR-T3.25",
+        "title": "Will the upper bound of the federal funds rate be above 3.25% following the Fed'",
+        "side": "YES",
+        "contracts": 588,
+        "entry": 34.0,
+        "cost": 199.92,
+        "status": "open"
+      }
+    ]
+  }
+}

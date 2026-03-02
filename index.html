@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Alpha — Unified Portfolio Dashboard</title>
+<meta http-equiv="refresh" content="300">
+<style>
+  :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;--red:#f85149;--yellow:#d29922;--purple:#bc8cff;--orange:#f0883e}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);padding:16px;max-width:1400px;margin:0 auto}
+  .header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px}
+  .header h1{font-size:24px;color:#fff}
+  .timestamp{color:var(--muted);font-size:12px}
+  .live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:6px;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .tabs{display:flex;gap:4px;margin-bottom:16px;flex-wrap:wrap}
+  .tab{padding:8px 16px;border-radius:8px 8px 0 0;cursor:pointer;font-size:13px;font-weight:600;border:1px solid var(--border);border-bottom:none;background:var(--bg);color:var(--muted);transition:all .2s}
+  .tab.active{background:var(--card);color:#fff;border-color:var(--accent)}
+  .tab:hover{color:#fff}
+  .tab-content{display:none}
+  .tab-content.active{display:block}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:16px}
+  .stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px}
+  .stat-card .label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+  .stat-card .value{font-size:22px;font-weight:700;color:#fff}
+  .stat-card .sub{font-size:11px;margin-top:2px}
+  .pos{color:var(--green)}.neg{color:var(--red)}.neu{color:var(--yellow)}
+  .section{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:14px}
+  .section h2{font-size:14px;color:#fff;margin-bottom:10px}
+  .section h3{font-size:13px;color:var(--accent);margin:12px 0 8px}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th{text-align:left;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;padding:5px 8px;border-bottom:1px solid var(--border)}
+  td{padding:6px 8px;border-bottom:1px solid rgba(48,54,61,.5)}
+  tr:hover{background:rgba(88,166,255,.04)}
+  .ticker{font-weight:700;color:#fff}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+  .signal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:5px}
+  .signal{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:6px;text-align:center}
+  .signal .name{font-size:10px;color:var(--muted)}.signal .score{font-size:16px;font-weight:700;margin:2px 0}.signal .slabel{font-size:8px;text-transform:uppercase;font-weight:600}
+  .cb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+  .cb{padding:5px;border-radius:5px;text-align:center;font-size:9px}
+  .cb-clear{background:rgba(63,185,80,.08);color:var(--green);border:1px solid rgba(63,185,80,.2)}
+  .cb-triggered{background:rgba(248,81,73,.15);color:var(--red);border:1px solid rgba(248,81,73,.4)}
+  .geo-alert{background:rgba(248,81,73,.08);border:1px solid rgba(248,81,73,.25);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#ff7b72;display:none}
+  .geo-alert.active{display:flex;align-items:center;gap:10px}
+  .bar{height:5px;background:var(--border);border-radius:3px;overflow:hidden;margin-top:4px}
+  .bar-fill{height:100%;border-radius:3px}
+  .market-strip{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px;padding:8px 12px;background:var(--card);border:1px solid var(--border);border-radius:10px;font-size:12px}
+  .market-item{display:flex;gap:5px;align-items:center}
+  .market-item .mt{color:var(--muted)}
+  .order-status{display:inline-block;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:600}
+  .status-new{background:rgba(88,166,255,.15);color:var(--accent)}
+  .status-filled{background:rgba(63,185,80,.15);color:var(--green)}
+  .footer{text-align:center;color:#484f58;font-size:11px;margin-top:24px;padding:14px}
+  .portfolio-ring{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  .ring-chart{position:relative;width:140px;height:140px}
+  .ring-legend{font-size:12px;line-height:2}
+  .ring-legend .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+  .benchmark-row{display:flex;gap:8px;align-items:center;padding:4px 0}
+  .bench-label{width:120px;font-size:12px;color:var(--muted)}
+  .bench-bar{flex:1;height:20px;background:var(--border);border-radius:4px;position:relative;overflow:hidden}
+  .bench-fill{height:100%;border-radius:4px;min-width:2px;transition:width .5s}
+  .bench-val{font-size:12px;font-weight:600;width:60px;text-align:right}
+  .lien-state{display:inline-block;padding:2px 6px;border-radius:3px;font-size:10px;font-weight:600;background:rgba(88,166,255,.15);color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="header">
+  <div><h1>🎯 Project Alpha</h1><div class="timestamp"><span class="live-dot"></span><span id="ts">Loading...</span></div></div>
+  <div style="text-align:right"><span id="regimeBadge" style="display:inline-block;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600;background:rgba(210,153,34,.2);color:var(--yellow)">—</span><div style="font-size:11px;color:var(--muted);margin-top:3px">Composite: <span id="regimeScore">—</span></div></div>
+</div>
+<div id="geoAlert" class="geo-alert"><span style="font-size:18px">🔴</span><div id="geoText"></div></div>
+
+<!-- MASTER STATS -->
+<div class="grid" id="masterStats"></div>
+
+<!-- TABS -->
+<div class="tabs">
+  <div class="tab active" onclick="showTab('overview')">📊 Overview</div>
+  <div class="tab" onclick="showTab('equities')">📈 Equities</div>
+  <div class="tab" onclick="showTab('taxliens')">🏡 Tax Liens</div>
+  <div class="tab" onclick="showTab('predictions')">🎯 Predictions</div>
+  <div class="tab" onclick="showTab('crypto')">🪙 Crypto</div>
+  <div class="tab" onclick="showTab('signals')">📡 Signals</div>
+  <div class="tab" onclick="showTab('risk')">🛡️ Risk</div>
+</div>
+
+<div id="tabContent"></div>
+<div class="footer">Project Alpha — Unified Multi-Strategy Trading System<br>30+ Skills · 11,807 Instruments · 5 AI Engines · Paper Trading Phase</div>
+
+<script>
+const DATA_URL='dashboard_data.json';
+let D={};
+
+function pc(v){return v>0?'pos':v<0?'neg':'neu'}
+function fm(v,p='$'){return p+Math.abs(v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function fp(v){return(v>=0?'+':'')+v.toFixed(2)+'%'}
+function timeAgo(iso){const d=(Date.now()-new Date(iso).getTime())/1e3;if(d<60)return'just now';if(d<3600)return Math.floor(d/60)+'m ago';if(d<86400)return Math.floor(d/3600)+'h ago';return Math.floor(d/86400)+'d ago'}
+
+function showTab(name){
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',t.textContent.includes(
+    {overview:'Overview',equities:'Equities',taxliens:'Tax Liens',predictions:'Predictions',crypto:'Crypto',signals:'Signals',risk:'Risk'}[name]||''
+  )));
+  renderTab(name);
+}
+
+function renderTab(name){
+  const el=document.getElementById('tabContent');
+  const fn={overview:renderOverview,equities:renderEquities,taxliens:renderTaxLiens,predictions:renderPredictions,crypto:renderCrypto,signals:renderSignals,risk:renderRisk}[name];
+  el.innerHTML=fn?fn():'';
+}
+
+function renderOverview(){
+  const p=D.portfolio||{},tl=D.tax_liens||{},pm=D.predictions||{},cr=D.crypto||{};
+  // Portfolio allocation ring
+  const eqVal=p.deployed||0,tlVal=tl.total_deployed||0,pmVal=pm.deployed||0,cashVal=(p.cash||0);
+  const total=eqVal+tlVal+pmVal+cashVal;
+  
+  // Benchmarks
+  const m=D.market||{};
+  const ourPct=p.day_pnl_pct||0;
+  const spyPct=m.SPY?.change_pct||0,qqqPct=m.QQQ?.change_pct||0,iwmPct=m.IWM?.change_pct||0;
+  const beatAll=ourPct>spyPct&&ourPct>qqqPct&&ourPct>iwmPct;
+  const lostAll=ourPct<spyPct&&ourPct<qqqPct&&ourPct<iwmPct;
+  const benchIcon=beatAll?'✅':lostAll?'❌':'⚠️';
+
+  let h=`<div class="two-col"><div class="section"><h2>💰 Portfolio Allocation</h2><div class="portfolio-ring">
+    <svg class="ring-chart" viewBox="0 0 140 140">`;
+  // Simple donut chart
+  const segs=[{v:eqVal,c:'#58a6ff',l:'Equities'},{v:tlVal,c:'#3fb950',l:'Tax Liens'},{v:pmVal,c:'#bc8cff',l:'Predictions'},{v:cashVal,c:'#30363d',l:'Cash'}];
+  let cum=0;const r=55,cx=70,cy=70;
+  segs.forEach(s=>{if(s.v<=0)return;const pct=s.v/total;const a1=cum*2*Math.PI-Math.PI/2;cum+=pct;const a2=cum*2*Math.PI-Math.PI/2;
+    const la=pct>.5?1:0;const x1=cx+r*Math.cos(a1),y1=cy+r*Math.sin(a1),x2=cx+r*Math.cos(a2),y2=cy+r*Math.sin(a2);
+    h+=`<path d="M${cx},${cy} L${x1},${y1} A${r},${r} 0 ${la} 1 ${x2},${y2} Z" fill="${s.c}" opacity="0.8"/>`;
+  });
+  h+=`<circle cx="${cx}" cy="${cy}" r="35" fill="var(--bg)"/><text x="${cx}" y="${cy-6}" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">${fm(total)}</text><text x="${cx}" y="${cy+12}" text-anchor="middle" fill="var(--muted)" font-size="10">TOTAL</text></svg>`;
+  h+=`<div class="ring-legend">`;
+  segs.forEach(s=>{if(s.v<=0)return;h+=`<div><span class="dot" style="background:${s.c}"></span>${s.l}: ${fm(s.v)} (${(s.v/total*100).toFixed(1)}%)</div>`});
+  h+=`</div></div></div>`;
+
+  // Benchmarks
+  h+=`<div class="section"><h2>${benchIcon} vs Benchmarks (Today)</h2>`;
+  const benches=[{l:'Project Alpha',v:ourPct,c:'var(--accent)'},{l:'SPY (S&P 500)',v:spyPct,c:'var(--green)'},{l:'QQQ (Nasdaq)',v:qqqPct,c:'var(--purple)'},{l:'IWM (Russell)',v:iwmPct,c:'var(--orange)'}];
+  const maxB=Math.max(...benches.map(b=>Math.abs(b.v)),0.01);
+  benches.forEach(b=>{
+    const w=Math.abs(b.v)/maxB*100;
+    h+=`<div class="benchmark-row"><span class="bench-label">${b.l}</span><div class="bench-bar"><div class="bench-fill" style="width:${w}%;background:${b.v>=0?b.c:'var(--red)'}"></div></div><span class="bench-val ${pc(b.v)}">${fp(b.v)}</span></div>`;
+  });
+  h+=`<div style="margin-top:10px;font-size:11px;color:var(--muted)">YTD: ${fp((p.equity-100000)/100000*100)} vs inception $100K</div></div></div>`;
+
+  // Strategy allocation
+  if(D.allocation){
+    h+=`<div class="section"><h2>🌐 Strategy Allocation</h2><table><thead><tr><th>Strategy</th><th>Current</th><th>Target</th><th>Gap</th><th>Action</th></tr></thead><tbody>`;
+    D.allocation.forEach(a=>{
+      const gap=a.current-a.target;
+      h+=`<tr><td>${a.strategy}</td><td class="${gap<-5?'neg':'pos'}">${a.current}%</td><td>${a.target}%</td><td class="${pc(gap)}">${gap>0?'+':''}${gap.toFixed(1)}%</td><td style="font-size:11px">${a.action}</td></tr>`;
+    });
+    h+=`</tbody></table></div>`;
+  }
+  return h;
+}
+
+function renderEquities(){
+  const p=D.portfolio||{};
+  let h=`<div class="section"><h2>📈 Equity Positions</h2><table>
+    <thead><tr><th>Ticker</th><th>Strategy</th><th>Shares</th><th>Entry</th><th>Current</th><th>P&L</th><th>%</th><th>Stop</th><th>Target</th><th>R:R</th></tr></thead><tbody>`;
+  (D.positions||[]).forEach(pos=>{
+    const progress=Math.max(0,Math.min(100,((pos.current-pos.stop)/(pos.target-pos.stop))*100));
+    h+=`<tr><td class="ticker">${pos.ticker}</td><td>${pos.strategy}</td><td>${pos.shares}</td><td>$${pos.entry.toFixed(2)}</td><td>$${pos.current.toFixed(2)}</td><td class="${pc(pos.pnl)}">${pos.pnl>=0?'+':''}${fm(pos.pnl)}</td><td class="${pc(pos.pnl_pct)}">${fp(pos.pnl_pct)}</td><td style="color:var(--red)">$${pos.stop.toFixed(2)}</td><td style="color:var(--green)">$${pos.target.toFixed(2)}</td><td><div class="bar"><div class="bar-fill" style="width:${progress}%;background:${progress>60?'var(--green)':progress>30?'var(--yellow)':'var(--red)'}"></div></div></td></tr>`;
+  });
+  h+=`</tbody></table></div>`;
+
+  h+=`<div class="section"><h2>📋 Open Orders</h2><table><thead><tr><th>Action</th><th>Ticker</th><th>Qty</th><th>Limit</th><th>Status</th><th>Notes</th></tr></thead><tbody>`;
+  (D.orders||[]).forEach(o=>{
+    h+=`<tr><td>${o.action}</td><td class="ticker">${o.ticker}</td><td>${o.qty}</td><td>$${o.limit.toFixed(2)}</td><td><span class="order-status ${o.status==='filled'?'status-filled':'status-new'}">${o.status.toUpperCase()}</span></td><td>${o.notes}</td></tr>`;
+  });
+  h+=`</tbody></table></div>`;
+  return h;
+}
+
+function renderTaxLiens(){
+  const tl=D.tax_liens||{};
+  const liens=tl.liens||[];
+  let h=`<div class="grid">
+    <div class="stat-card"><div class="label">Total Deployed</div><div class="value">${fm(tl.total_deployed||0)}</div><div class="sub neu">${liens.length} liens</div></div>
+    <div class="stat-card"><div class="label">Annual Interest</div><div class="value pos">${fm(tl.annual_interest||0)}</div><div class="sub pos">${((tl.annual_interest||0)/(tl.total_deployed||1)*100).toFixed(1)}% yield</div></div>
+    <div class="stat-card"><div class="label">Avg Risk Score</div><div class="value">${(tl.avg_risk||0).toFixed(1)}</div><div class="sub neu">Lower is better</div></div>
+    <div class="stat-card"><div class="label">States</div><div class="value">${tl.state_count||0}</div><div class="sub neu">${(tl.states||[]).join(', ')}</div></div>
+  </div>`;
+
+  h+=`<div class="section"><h2>🏡 Tax Lien Holdings</h2><table>
+    <thead><tr><th>ID</th><th>State</th><th>County</th><th>Amount</th><th>Rate</th><th>Est Interest</th><th>Risk</th><th>LTV</th><th>Redemption</th></tr></thead><tbody>`;
+  liens.forEach(l=>{
+    h+=`<tr><td>${l.id}</td><td><span class="lien-state">${l.state}</span></td><td>${l.county}</td><td>$${l.amount.toLocaleString()}</td><td class="pos">${(l.rate*100).toFixed(1)}%</td><td class="pos">$${l.annual_interest.toFixed(0)}</td><td>${l.risk.toFixed(1)}</td><td>${(l.ltv*100).toFixed(1)}%</td><td>${l.redemption}</td></tr>`;
+  });
+  h+=`</tbody></table></div>`;
+
+  // By state breakdown
+  h+=`<div class="section"><h2>📊 By State</h2><table><thead><tr><th>State</th><th>Liens</th><th>Deployed</th><th>Avg Rate</th><th>Avg Risk</th></tr></thead><tbody>`;
+  const byState={};
+  liens.forEach(l=>{if(!byState[l.state])byState[l.state]={count:0,deployed:0,rates:[],risks:[]};byState[l.state].count++;byState[l.state].deployed+=l.amount;byState[l.state].rates.push(l.rate);byState[l.state].risks.push(l.risk)});
+  Object.entries(byState).sort((a,b)=>b[1].deployed-a[1].deployed).forEach(([st,d])=>{
+    const avgR=d.rates.reduce((a,b)=>a+b,0)/d.rates.length;
+    const avgRisk=d.risks.reduce((a,b)=>a+b,0)/d.risks.length;
+    h+=`<tr><td class="ticker">${st}</td><td>${d.count}</td><td>$${d.deployed.toLocaleString()}</td><td class="pos">${(avgR*100).toFixed(1)}%</td><td>${avgRisk.toFixed(1)}</td></tr>`;
+  });
+  h+=`</tbody></table></div>`;
+  return h;
+}
+
+function renderPredictions(){
+  const pm=D.predictions||{};
+  let h=`<div class="grid">
+    <div class="stat-card"><div class="label">Portfolio Value</div><div class="value">${fm(pm.value||0)}</div></div>
+    <div class="stat-card"><div class="label">Cash</div><div class="value">${fm(pm.cash||0)}</div></div>
+    <div class="stat-card"><div class="label">P&L</div><div class="value ${pc(pm.pnl||0)}">${fm(pm.pnl||0)}</div></div>
+    <div class="stat-card"><div class="label">Win Rate</div><div class="value">${pm.win_rate||'—'}</div></div>
+  </div>`;
+  h+=`<div class="section"><h2>🎯 Prediction Market Positions (Kalshi)</h2><table>
+    <thead><tr><th>Contract</th><th>Side</th><th>Contracts</th><th>Entry</th><th>Cost</th><th>Status</th></tr></thead><tbody>`;
+  (pm.positions||[]).forEach(p=>{
+    h+=`<tr><td>${p.title||p.ticker}</td><td>${p.side}</td><td>${p.contracts}</td><td>${p.entry}¢</td><td>$${p.cost.toFixed(2)}</td><td>${p.status||'open'}</td></tr>`;
+  });
+  h+=`</tbody></table></div>`;
+  return h;
+}
+
+function renderCrypto(){
+  const c=D.crypto||{};
+  let h=`<div class="section"><h2>🪙 Crypto Regime: <span class="${c.regime==='MINIMAL'?'neu':'pos'}">${c.regime||'—'}</span></h2>
+    <table><thead><tr><th>Asset</th><th>Price</th><th>vs 200MA</th><th>Signal</th></tr></thead><tbody>`;
+  if(c.BTC)h+=`<tr><td class="ticker">BTC</td><td>$${c.BTC.toLocaleString()}</td><td class="neg">Below</td><td class="neg">AVOID</td></tr>`;
+  if(c.ETH)h+=`<tr><td class="ticker">ETH</td><td>$${c.ETH.toLocaleString()}</td><td class="neg">Below</td><td class="neg">AVOID</td></tr>`;
+  h+=`</tbody></table><p style="margin-top:10px;font-size:12px;color:var(--muted)">Recommendation: ${c.recommendation||'—'}</p></div>`;
+  return h;
+}
+
+function renderSignals(){
+  let h='';
+  // Market strip
+  const m=D.market||{};
+  h+=`<div class="market-strip">`;
+  for(const[sym,info]of Object.entries(m)){
+    const chg=info.change_pct!=null?`<span class="${pc(info.change_pct)}">${fp(info.change_pct)}</span>`:'';
+    h+=`<div class="market-item"><span class="mt">${sym}</span> <strong>$${info.price?.toLocaleString()||'—'}</strong> ${chg}</div>`;
+  }
+  h+=`</div>`;
+
+  h+=`<div class="two-col">`;
+  // Signals
+  if(D.signals){
+    h+=`<div class="section"><h2>🎯 Technical Signals</h2><div class="signal-grid">`;
+    D.signals.forEach(s=>{
+      const r=s.score/s.max;const c=r>.5?'pos':r<-.2?'neg':'neu';
+      h+=`<div class="signal"><div class="name">${s.ticker}</div><div class="score ${c}">${s.score>0?'+':''}${s.score}/${s.max}</div><div class="slabel ${c}">${s.label}</div></div>`;
+    });
+    h+=`</div></div>`;
+  }
+  // Momentum
+  if(D.momentum){
+    h+=`<div class="section"><h2>🏆 Momentum</h2><table><thead><tr><th>#</th><th>Ticker</th><th>Score</th></tr></thead><tbody>`;
+    D.momentum.forEach(m=>{h+=`<tr><td>${m.rank}</td><td class="ticker">${m.ticker}</td><td class="${pc(m.score)}">${m.score>0?'+':''}${m.score.toFixed(2)}</td></tr>`});
+    h+=`</tbody></table></div>`;
+  }
+  h+=`</div>`;
+
+  // Regime factors
+  if(D.regime){
+    h+=`<div class="section"><h2>📊 Regime Factors (V2.1)</h2><table><thead><tr><th>Factor</th><th>Raw</th><th>Weight</th><th>Weighted</th></tr></thead><tbody>`;
+    for(const[k,f]of Object.entries(D.regime.factors||{})){
+      h+=`<tr><td style="text-transform:capitalize">${k}</td><td>${f.raw>0?'+':''}${f.raw.toFixed(2)}</td><td>${(f.weight*100).toFixed(0)}%</td><td class="${pc(f.weighted)}">${f.weighted>0?'+':''}${f.weighted.toFixed(3)}</td></tr>`;
+    }
+    h+=`<tr style="font-weight:700"><td>Raw</td><td colspan="2"></td><td>${D.regime.composite_raw>0?'+':''}${D.regime.composite_raw.toFixed(2)}</td></tr>`;
+    h+=`<tr style="font-weight:700"><td>Geo Adj</td><td colspan="2"></td><td class="neg">${D.regime.geo_adj.toFixed(2)}</td></tr>`;
+    h+=`<tr style="font-weight:700;font-size:14px"><td>FINAL</td><td colspan="2"></td><td class="${pc(D.regime.composite_adj)}">${D.regime.composite_adj>0?'+':''}${D.regime.composite_adj.toFixed(2)}</td></tr>`;
+    h+=`</tbody></table></div>`;
+  }
+  return h;
+}
+
+function renderRisk(){
+  let h='';
+  if(D.circuit_breakers){
+    h+=`<div class="section"><h2>🛡️ Circuit Breakers</h2><div class="cb-grid">`;
+    D.circuit_breakers.forEach(cb=>{
+      h+=`<div class="cb ${cb.clear?'cb-clear':'cb-triggered'}">${cb.clear?'✅':'🔴'} ${cb.name}<br>${cb.current} / ${cb.threshold}</div>`;
+    });
+    h+=`</div></div>`;
+  }
+  // Risk metrics
+  const p=D.portfolio||{};
+  h+=`<div class="section"><h2>📐 Risk Metrics</h2><table>
+    <tr><td>Max Drawdown</td><td class="${pc(-(p.high_watermark-p.equity))}">${((p.equity-(p.high_watermark||100000))/(p.high_watermark||100000)*100).toFixed(2)}%</td><td>Limit: -15%</td></tr>
+    <tr><td>Daily Loss</td><td class="${pc(p.day_pnl_pct||0)}">${fp(p.day_pnl_pct||0)}</td><td>Limit: -2%</td></tr>
+    <tr><td>Deployed %</td><td>${((p.deployed||0)/(p.equity||1)*100).toFixed(1)}%</td><td>Target: 40-85%</td></tr>
+    <tr><td>Cash %</td><td>${((p.cash||0)/(p.equity||1)*100).toFixed(1)}%</td><td>Target: 15-60%</td></tr>
+    <tr><td>Largest Position</td><td>${D.positions?.length?Math.max(...D.positions.map(p=>(p.current*p.shares))).toFixed(0):'—'}</td><td>Limit: 10% ($${((p.equity||100000)*.1).toFixed(0)})</td></tr>
+  </table></div>`;
+  return h;
+}
+
+function renderMaster(){
+  const p=D.portfolio||{},tl=D.tax_liens||{},pm=D.predictions||{};
+  const totalEquity=(p.equity||0)+(tl.total_deployed||0)+(pm.value||0);
+  const totalPnl=(p.total_pnl||0)+(tl.unrealized_pnl||0)+(pm.pnl||0);
+  const el=document.getElementById('masterStats');
+  el.innerHTML=`
+    <div class="stat-card"><div class="label">Total Portfolio</div><div class="value">${fm(totalEquity)}</div><div class="sub neu">Across all strategies</div></div>
+    <div class="stat-card"><div class="label">Equities (Alpaca)</div><div class="value">${fm(p.equity||0)}</div><div class="sub ${pc(p.day_pnl||0)}">${(p.day_pnl||0)>=0?'+':''}${fm(p.day_pnl||0)} today</div></div>
+    <div class="stat-card"><div class="label">Tax Liens</div><div class="value">${fm(tl.total_deployed||0)}</div><div class="sub pos">+${fm(tl.annual_interest||0)}/yr</div></div>
+    <div class="stat-card"><div class="label">Predictions</div><div class="value">${fm(pm.value||0)}</div><div class="sub ${pc(pm.pnl||0)}">${fm(pm.pnl||0)} P&L</div></div>
+    <div class="stat-card"><div class="label">Total P&L</div><div class="value ${pc(totalPnl)}">${totalPnl>=0?'+':''}${fm(totalPnl)}</div><div class="sub neu">All portfolios</div></div>
+    <div class="stat-card"><div class="label">Cash Reserve</div><div class="value">${fm(p.cash||0)}</div><div class="sub neu">${((p.cash||0)/(p.equity||1)*100).toFixed(0)}% liquid</div></div>
+  `;
+}
+
+async function load(){
+  try{
+    const r=await fetch(DATA_URL+'?t='+Date.now());
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    D=await r.json();
+    document.getElementById('ts').textContent='Updated '+timeAgo(D.updated)+' · Auto-refreshes 5 min';
+    if(D.regime){
+      const b=document.getElementById('regimeBadge');
+      b.textContent=D.regime.label;
+      document.getElementById('regimeScore').textContent=D.regime.composite_adj.toFixed(2);
+    }
+    if(D.geo_alert?.active){
+      document.getElementById('geoAlert').classList.add('active');
+      document.getElementById('geoText').innerHTML=`<strong>GEOPOLITICAL: ${D.geo_alert.level} (${D.geo_alert.score})</strong> — ${D.geo_alert.headline}`;
+    }
+    renderMaster();
+    showTab('overview');
+  }catch(e){
+    document.getElementById('tabContent').innerHTML=`<div style="text-align:center;padding:40px;color:var(--red)">⚠️ ${e.message}</div>`;
+  }
+}
+load();
+setInterval(load,300000);
+</script>
+</body>
+</html>
