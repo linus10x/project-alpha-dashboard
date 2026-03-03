@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-03T16:00:10.310062-06:00",
+  "updated": "2026-03-03T16:32:13.358841-06:00",
   "regime": {
     "label": "RANGE-BOUND",
     "composite_raw": 0.1,
@@ -40,12 +40,12 @@
     }
   },
   "portfolio": {
-    "equity": 98522.97,
+    "equity": 98593.16,
     "cash": 71847.29,
-    "deployed": 27776.56,
+    "deployed": 27846.69,
     "day_pnl": 0.0,
     "day_pnl_pct": 0.0,
-    "total_pnl": -1477.03,
+    "total_pnl": -1406.84,
     "high_watermark": 100000,
     "inception": "2026-02-27"
   },
@@ -55,9 +55,9 @@
       "strategy": "Unknown",
       "shares": 13,
       "entry": 374.59,
-      "current": 368.0,
-      "pnl": -85.61,
-      "pnl_pct": -1.76,
+      "current": 369.9,
+      "pnl": -60.91,
+      "pnl_pct": -1.25,
       "stop": 348.75,
       "target": 412.5
     },
@@ -66,9 +66,9 @@
       "strategy": "Unknown",
       "shares": 7,
       "entry": 661.34,
-      "current": 666.69,
-      "pnl": 37.45,
-      "pnl_pct": 0.81,
+      "current": 667.63,
+      "pnl": 44.03,
+      "pnl_pct": 0.95,
       "stop": 615.05,
       "target": 727.47
     },
@@ -77,9 +77,9 @@
       "strategy": "Unknown",
       "shares": 95,
       "entry": 50.42,
-      "current": 48.54,
-      "pnl": -178.93,
-      "pnl_pct": -3.74,
+      "current": 48.58,
+      "pnl": -175.13,
+      "pnl_pct": -3.66,
       "stop": 46.96,
       "target": 55.54
     },
@@ -100,8 +100,8 @@
       "shares": 54,
       "entry": 89.78,
       "current": 89.4,
-      "pnl": -20.52,
-      "pnl_pct": -0.42,
+      "pnl": -20.64,
+      "pnl_pct": -0.43,
       "stop": 87.0,
       "target": 95.0
     },
@@ -110,9 +110,9 @@
       "strategy": "Unknown",
       "shares": 195,
       "entry": 21.15,
-      "current": 20.81,
-      "pnl": -65.79,
-      "pnl_pct": -1.59,
+      "current": 20.8,
+      "pnl": -67.56,
+      "pnl_pct": -1.64,
       "stop": 19.67,
       "target": 23.26
     },
@@ -121,14 +121,22 @@
       "strategy": "Unknown",
       "shares": 20,
       "entry": 246.88,
-      "current": 242.0,
-      "pnl": -97.6,
-      "pnl_pct": -1.98,
+      "current": 243.85,
+      "pnl": -60.6,
+      "pnl_pct": -1.23,
       "stop": 229.6,
       "target": 271.57
     }
   ],
   "orders": [
+    {
+      "action": "SELL",
+      "ticker": "UUUU",
+      "qty": 195,
+      "limit": 0.0,
+      "status": "accepted",
+      "notes": "stop"
+    },
     {
       "action": "SELL",
       "ticker": "LMT",
