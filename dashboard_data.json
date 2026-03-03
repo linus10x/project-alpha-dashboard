@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-03T08:00:11.049493-06:00",
+  "updated": "2026-03-03T08:30:41.039018-06:00",
   "regime": {
     "label": "RANGE-BOUND",
     "composite_raw": 0.1,
@@ -40,12 +40,12 @@
     }
   },
   "portfolio": {
-    "equity": 99346.37,
-    "cash": 85169.69,
-    "deployed": 14176.63,
+    "equity": 99308.27,
+    "cash": 84943.83,
+    "deployed": 15659.66,
     "day_pnl": 0.0,
     "day_pnl_pct": 0.0,
-    "total_pnl": -653.63,
+    "total_pnl": -691.73,
     "high_watermark": 100000,
     "inception": "2026-02-27"
   },
@@ -55,9 +55,9 @@
       "strategy": "Momentum (Gold)",
       "shares": 43,
       "entry": 115.7,
-      "current": 108.22,
-      "pnl": -321.64,
-      "pnl_pct": -6.46,
+      "current": 107.43,
+      "pnl": -355.61,
+      "pnl_pct": -7.15,
       "stop": 108.38,
       "target": 127.03
     },
@@ -66,11 +66,44 @@
       "strategy": "Momentum (Gold)",
       "shares": 135,
       "entry": 37.09,
-      "current": 34.95,
-      "pnl": -288.79,
-      "pnl_pct": -5.77,
+      "current": 34.73,
+      "pnl": -319.22,
+      "pnl_pct": -6.38,
       "stop": 34.07,
       "target": 41.37
+    },
+    {
+      "ticker": "LHX",
+      "strategy": "Unknown",
+      "shares": 2,
+      "entry": 375.0,
+      "current": 374.06,
+      "pnl": -1.88,
+      "pnl_pct": -0.25,
+      "stop": 348.75,
+      "target": 412.5
+    },
+    {
+      "ticker": "SLB",
+      "strategy": "Unknown",
+      "shares": 16,
+      "entry": 50.49,
+      "current": 50.73,
+      "pnl": 3.92,
+      "pnl_pct": 0.48,
+      "stop": 46.96,
+      "target": 55.54
+    },
+    {
+      "ticker": "SPY260417P00660000",
+      "strategy": "Unknown",
+      "shares": -1,
+      "entry": 13.32,
+      "current": 13.1,
+      "pnl": 22.0,
+      "pnl_pct": 1.65,
+      "stop": 12.39,
+      "target": 14.65
     },
     {
       "ticker": "TLT",
@@ -78,7 +111,7 @@
       "shares": 54,
       "entry": 89.78,
       "current": 88.98,
-      "pnl": -43.2,
+      "pnl": -42.93,
       "pnl_pct": -0.89,
       "stop": 87.0,
       "target": 95.0
@@ -87,17 +120,105 @@
   "orders": [
     {
       "action": "SELL",
-      "ticker": "KGC",
-      "qty": 135,
-      "limit": 41.37,
+      "ticker": "GDX",
+      "qty": 43,
+      "limit": 0.0,
+      "status": "pending_new",
+      "notes": "stop"
+    },
+    {
+      "action": "BUY",
+      "ticker": "SPY260417P00680000",
+      "qty": 1,
+      "limit": 12.0,
       "status": "new",
       "notes": "limit"
     },
     {
       "action": "SELL",
-      "ticker": "GDX",
-      "qty": 43,
-      "limit": 127.03,
+      "ticker": "HL260417P00020000",
+      "qty": 1,
+      "limit": 1.3,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "SELL",
+      "ticker": "TLT",
+      "qty": 54,
+      "limit": 0.0,
+      "status": "new",
+      "notes": "stop"
+    },
+    {
+      "action": "BUY",
+      "ticker": "GLD",
+      "qty": 10,
+      "limit": 488.0,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "BUY",
+      "ticker": "SLB",
+      "qty": 95,
+      "limit": 51.0,
+      "status": "partially_filled",
+      "notes": "limit"
+    },
+    {
+      "action": "BUY",
+      "ticker": "LHX",
+      "qty": 13,
+      "limit": 375.0,
+      "status": "partially_filled",
+      "notes": "limit"
+    },
+    {
+      "action": "BUY",
+      "ticker": "AVAV",
+      "qty": 24,
+      "limit": 205.0,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "BUY",
+      "ticker": "VRT",
+      "qty": 20,
+      "limit": 255.0,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "BUY",
+      "ticker": "AEM",
+      "qty": 20,
+      "limit": 250.0,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "BUY",
+      "ticker": "UUUU",
+      "qty": 195,
+      "limit": 23.0,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "BUY",
+      "ticker": "CCJ",
+      "qty": 40,
+      "limit": 124.5,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "SELL",
+      "ticker": "KGC",
+      "qty": 135,
+      "limit": 41.37,
       "status": "new",
       "notes": "limit"
     },
@@ -337,15 +458,15 @@
   "market": {
     "SPY": {
       "price": 686.38,
-      "change_pct": 0.06
+      "change_pct": 0.0
     },
     "QQQ": {
       "price": 608.09,
-      "change_pct": 0.13
+      "change_pct": 0.0
     },
     "IWM": {
       "price": 263.81,
-      "change_pct": 0.92
+      "change_pct": 0.0
     },
     "VIX": {
       "price": 19.86,
@@ -353,15 +474,15 @@
     },
     "GLD": {
       "price": 490,
-      "change_pct": 1.29
+      "change_pct": 0.0
     },
     "TLT": {
       "price": 89.61,
-      "change_pct": -1.33
+      "change_pct": 0.0
     },
     "HYG": {
       "price": 80.28,
-      "change_pct": -0.55
+      "change_pct": 0.0
     }
   },
   "geo_alert": {
