@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-03T14:30:43.285111-06:00",
+  "updated": "2026-03-03T15:00:09.360800-06:00",
   "regime": {
     "label": "RANGE-BOUND",
     "composite_raw": 0.1,
@@ -40,12 +40,12 @@
     }
   },
   "portfolio": {
-    "equity": 98721.55,
+    "equity": 98601.24,
     "cash": 71847.29,
-    "deployed": 27928.63,
+    "deployed": 27855.37,
     "day_pnl": 0.0,
     "day_pnl_pct": 0.0,
-    "total_pnl": -1278.45,
+    "total_pnl": -1398.76,
     "high_watermark": 100000,
     "inception": "2026-02-27"
   },
@@ -55,9 +55,9 @@
       "strategy": "Unknown",
       "shares": 13,
       "entry": 374.59,
-      "current": 370.21,
-      "pnl": -56.82,
-      "pnl_pct": -1.17,
+      "current": 368.0,
+      "pnl": -85.61,
+      "pnl_pct": -1.76,
       "stop": 348.75,
       "target": 412.5
     },
@@ -66,9 +66,9 @@
       "strategy": "Unknown",
       "shares": 7,
       "entry": 661.34,
-      "current": 668.13,
-      "pnl": 47.53,
-      "pnl_pct": 1.03,
+      "current": 667.82,
+      "pnl": 45.36,
+      "pnl_pct": 0.98,
       "stop": 615.05,
       "target": 727.47
     },
@@ -77,9 +77,9 @@
       "strategy": "Unknown",
       "shares": 95,
       "entry": 50.42,
-      "current": 48.53,
-      "pnl": -179.88,
-      "pnl_pct": -3.75,
+      "current": 48.58,
+      "pnl": -175.13,
+      "pnl_pct": -3.66,
       "stop": 46.96,
       "target": 55.54
     },
@@ -88,9 +88,9 @@
       "strategy": "Unknown",
       "shares": -1,
       "entry": 13.32,
-      "current": 10.65,
-      "pnl": 267.0,
-      "pnl_pct": 20.04,
+      "current": 11.12,
+      "pnl": 220.0,
+      "pnl_pct": 16.52,
       "stop": 12.39,
       "target": 14.65
     },
@@ -99,9 +99,9 @@
       "strategy": "Defense (Bonds)",
       "shares": 54,
       "entry": 89.78,
-      "current": 89.46,
-      "pnl": -17.28,
-      "pnl_pct": -0.36,
+      "current": 89.45,
+      "pnl": -17.82,
+      "pnl_pct": -0.37,
       "stop": 87.0,
       "target": 95.0
     },
@@ -110,9 +110,9 @@
       "strategy": "Unknown",
       "shares": 195,
       "entry": 21.15,
-      "current": 21.03,
-      "pnl": -22.87,
-      "pnl_pct": -0.56,
+      "current": 20.89,
+      "pnl": -50.19,
+      "pnl_pct": -1.22,
       "stop": 19.67,
       "target": 23.26
     },
@@ -121,9 +121,9 @@
       "strategy": "Unknown",
       "shares": 20,
       "entry": 246.88,
-      "current": 245.38,
-      "pnl": -30.1,
-      "pnl_pct": -0.61,
+      "current": 244.44,
+      "pnl": -48.8,
+      "pnl_pct": -0.99,
       "stop": 229.6,
       "target": 271.57
     }
@@ -171,25 +171,9 @@
     },
     {
       "action": "SELL",
-      "ticker": "SLB",
-      "qty": 95,
-      "limit": 62.0,
-      "status": "new",
-      "notes": "limit"
-    },
-    {
-      "action": "SELL",
       "ticker": "VRT",
       "qty": 20,
       "limit": 300.0,
-      "status": "new",
-      "notes": "limit"
-    },
-    {
-      "action": "BUY",
-      "ticker": "SPY260417P00680000",
-      "qty": 1,
-      "limit": 12.0,
       "status": "new",
       "notes": "limit"
     },
