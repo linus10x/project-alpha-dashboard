@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-03T14:00:09.701568-06:00",
+  "updated": "2026-03-03T14:30:43.285111-06:00",
   "regime": {
     "label": "RANGE-BOUND",
     "composite_raw": 0.1,
@@ -40,12 +40,12 @@
     }
   },
   "portfolio": {
-    "equity": 98652.11,
+    "equity": 98721.55,
     "cash": 71847.29,
-    "deployed": 27840.79,
+    "deployed": 27928.63,
     "day_pnl": 0.0,
     "day_pnl_pct": 0.0,
-    "total_pnl": -1347.89,
+    "total_pnl": -1278.45,
     "high_watermark": 100000,
     "inception": "2026-02-27"
   },
@@ -55,9 +55,9 @@
       "strategy": "Unknown",
       "shares": 13,
       "entry": 374.59,
-      "current": 369.65,
-      "pnl": -64.16,
-      "pnl_pct": -1.32,
+      "current": 370.21,
+      "pnl": -56.82,
+      "pnl_pct": -1.17,
       "stop": 348.75,
       "target": 412.5
     },
@@ -66,9 +66,9 @@
       "strategy": "Unknown",
       "shares": 7,
       "entry": 661.34,
-      "current": 663.74,
-      "pnl": 16.82,
-      "pnl_pct": 0.36,
+      "current": 668.13,
+      "pnl": 47.53,
+      "pnl_pct": 1.03,
       "stop": 615.05,
       "target": 727.47
     },
@@ -77,9 +77,9 @@
       "strategy": "Unknown",
       "shares": 95,
       "entry": 50.42,
-      "current": 48.45,
-      "pnl": -187.48,
-      "pnl_pct": -3.91,
+      "current": 48.53,
+      "pnl": -179.88,
+      "pnl_pct": -3.75,
       "stop": 46.96,
       "target": 55.54
     },
@@ -88,9 +88,9 @@
       "strategy": "Unknown",
       "shares": -1,
       "entry": 13.32,
-      "current": 10.47,
-      "pnl": 285.0,
-      "pnl_pct": 21.4,
+      "current": 10.65,
+      "pnl": 267.0,
+      "pnl_pct": 20.04,
       "stop": 12.39,
       "target": 14.65
     },
@@ -99,9 +99,9 @@
       "strategy": "Defense (Bonds)",
       "shares": 54,
       "entry": 89.78,
-      "current": 89.47,
-      "pnl": -17.01,
-      "pnl_pct": -0.35,
+      "current": 89.46,
+      "pnl": -17.28,
+      "pnl_pct": -0.36,
       "stop": 87.0,
       "target": 95.0
     },
@@ -110,9 +110,9 @@
       "strategy": "Unknown",
       "shares": 195,
       "entry": 21.15,
-      "current": 20.9,
-      "pnl": -47.48,
-      "pnl_pct": -1.15,
+      "current": 21.03,
+      "pnl": -22.87,
+      "pnl_pct": -0.56,
       "stop": 19.67,
       "target": 23.26
     },
@@ -121,9 +121,9 @@
       "strategy": "Unknown",
       "shares": 20,
       "entry": 246.88,
-      "current": 244.5,
-      "pnl": -47.55,
-      "pnl_pct": -0.96,
+      "current": 245.38,
+      "pnl": -30.1,
+      "pnl_pct": -0.61,
       "stop": 229.6,
       "target": 271.57
     }
