@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-03T15:00:09.360800-06:00",
+  "updated": "2026-03-03T15:33:24.983522-06:00",
   "regime": {
     "label": "RANGE-BOUND",
     "composite_raw": 0.1,
@@ -40,12 +40,12 @@
     }
   },
   "portfolio": {
-    "equity": 98601.24,
+    "equity": 98577.87,
     "cash": 71847.29,
-    "deployed": 27855.37,
+    "deployed": 27831.46,
     "day_pnl": 0.0,
     "day_pnl_pct": 0.0,
-    "total_pnl": -1398.76,
+    "total_pnl": -1422.13,
     "high_watermark": 100000,
     "inception": "2026-02-27"
   },
@@ -66,9 +66,9 @@
       "strategy": "Unknown",
       "shares": 7,
       "entry": 661.34,
-      "current": 667.82,
-      "pnl": 45.36,
-      "pnl_pct": 0.98,
+      "current": 668.0,
+      "pnl": 46.62,
+      "pnl_pct": 1.01,
       "stop": 615.05,
       "target": 727.47
     },
@@ -77,9 +77,9 @@
       "strategy": "Unknown",
       "shares": 95,
       "entry": 50.42,
-      "current": 48.58,
-      "pnl": -175.13,
-      "pnl_pct": -3.66,
+      "current": 48.6,
+      "pnl": -173.23,
+      "pnl_pct": -3.62,
       "stop": 46.96,
       "target": 55.54
     },
@@ -99,9 +99,9 @@
       "strategy": "Defense (Bonds)",
       "shares": 54,
       "entry": 89.78,
-      "current": 89.45,
-      "pnl": -17.82,
-      "pnl_pct": -0.37,
+      "current": 89.42,
+      "pnl": -19.44,
+      "pnl_pct": -0.4,
       "stop": 87.0,
       "target": 95.0
     },
@@ -110,9 +110,9 @@
       "strategy": "Unknown",
       "shares": 195,
       "entry": 21.15,
-      "current": 20.89,
-      "pnl": -50.19,
-      "pnl_pct": -1.22,
+      "current": 20.9,
+      "pnl": -48.24,
+      "pnl_pct": -1.17,
       "stop": 19.67,
       "target": 23.26
     },
@@ -121,30 +121,14 @@
       "strategy": "Unknown",
       "shares": 20,
       "entry": 246.88,
-      "current": 244.44,
-      "pnl": -48.8,
-      "pnl_pct": -0.99,
+      "current": 243.07,
+      "pnl": -76.2,
+      "pnl_pct": -1.54,
       "stop": 229.6,
       "target": 271.57
     }
   ],
   "orders": [
-    {
-      "action": "BUY",
-      "ticker": "EPD",
-      "qty": 133,
-      "limit": 36.81,
-      "status": "new",
-      "notes": "limit"
-    },
-    {
-      "action": "BUY",
-      "ticker": "SPY",
-      "qty": 4,
-      "limit": 674.0,
-      "status": "new",
-      "notes": "limit"
-    },
     {
       "action": "SELL",
       "ticker": "LMT",
@@ -155,43 +139,11 @@
     },
     {
       "action": "SELL",
-      "ticker": "UUUU",
-      "qty": 195,
-      "limit": 30.0,
-      "status": "new",
-      "notes": "limit"
-    },
-    {
-      "action": "SELL",
-      "ticker": "LHX",
-      "qty": 13,
-      "limit": 420.0,
-      "status": "new",
-      "notes": "limit"
-    },
-    {
-      "action": "SELL",
-      "ticker": "VRT",
-      "qty": 20,
-      "limit": 300.0,
-      "status": "new",
-      "notes": "limit"
-    },
-    {
-      "action": "SELL",
       "ticker": "TLT",
       "qty": 54,
       "limit": 0.0,
       "status": "new",
       "notes": "stop"
-    },
-    {
-      "action": "BUY",
-      "ticker": "AVAV",
-      "qty": 24,
-      "limit": 205.0,
-      "status": "new",
-      "notes": "limit"
     }
   ],
   "signals": [
