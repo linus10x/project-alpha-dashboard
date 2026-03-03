@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-03T09:01:25.699625-06:00",
+  "updated": "2026-03-03T09:31:37.861976-06:00",
   "regime": {
     "label": "RANGE-BOUND",
     "composite_raw": 0.1,
@@ -40,35 +40,24 @@
     }
   },
   "portfolio": {
-    "equity": 98237.54,
-    "cash": 72155.66,
-    "deployed": 27702.74,
+    "equity": 97887.28,
+    "cash": 72046.31,
+    "deployed": 27589.2,
     "day_pnl": 0.0,
     "day_pnl_pct": 0.0,
-    "total_pnl": -1762.46,
+    "total_pnl": -2112.72,
     "high_watermark": 100000,
     "inception": "2026-02-27"
   },
   "positions": [
     {
-      "ticker": "CCJ",
-      "strategy": "Unknown",
-      "shares": 40,
-      "entry": 117.73,
-      "current": 113.91,
-      "pnl": -152.98,
-      "pnl_pct": -3.25,
-      "stop": 109.49,
-      "target": 129.5
-    },
-    {
       "ticker": "HL260417P00020000",
       "strategy": "Unknown",
       "shares": -1,
       "entry": 1.43,
-      "current": 2.0,
-      "pnl": -57.0,
-      "pnl_pct": -39.86,
+      "current": 2.1,
+      "pnl": -67.0,
+      "pnl_pct": -46.85,
       "stop": 1.33,
       "target": 1.57
     },
@@ -77,20 +66,31 @@
       "strategy": "Unknown",
       "shares": 13,
       "entry": 374.59,
-      "current": 369.97,
-      "pnl": -60.0,
-      "pnl_pct": -1.23,
+      "current": 368.32,
+      "pnl": -81.39,
+      "pnl_pct": -1.67,
       "stop": 348.75,
       "target": 412.5
+    },
+    {
+      "ticker": "LMT",
+      "strategy": "Unknown",
+      "shares": 7,
+      "entry": 661.34,
+      "current": 659.06,
+      "pnl": -15.96,
+      "pnl_pct": -0.34,
+      "stop": 615.05,
+      "target": 727.47
     },
     {
       "ticker": "SLB",
       "strategy": "Unknown",
       "shares": 95,
       "entry": 50.42,
-      "current": 49.1,
-      "pnl": -125.26,
-      "pnl_pct": -2.61,
+      "current": 48.96,
+      "pnl": -139.03,
+      "pnl_pct": -2.9,
       "stop": 46.96,
       "target": 55.54
     },
@@ -99,9 +99,9 @@
       "strategy": "Unknown",
       "shares": -1,
       "entry": 13.32,
-      "current": 14.39,
-      "pnl": -107.0,
-      "pnl_pct": -8.03,
+      "current": 15.51,
+      "pnl": -219.0,
+      "pnl_pct": -16.44,
       "stop": 12.39,
       "target": 14.65
     },
@@ -110,9 +110,9 @@
       "strategy": "Defense (Bonds)",
       "shares": 54,
       "entry": 89.78,
-      "current": 89.13,
-      "pnl": -35.1,
-      "pnl_pct": -0.72,
+      "current": 89.42,
+      "pnl": -19.45,
+      "pnl_pct": -0.4,
       "stop": 87.0,
       "target": 95.0
     },
@@ -121,9 +121,9 @@
       "strategy": "Unknown",
       "shares": 195,
       "entry": 21.15,
-      "current": 20.76,
-      "pnl": -75.54,
-      "pnl_pct": -1.83,
+      "current": 20.37,
+      "pnl": -151.2,
+      "pnl_pct": -3.67,
       "stop": 19.67,
       "target": 23.26
     },
@@ -132,9 +132,9 @@
       "strategy": "Unknown",
       "shares": 20,
       "entry": 246.88,
-      "current": 241.37,
-      "pnl": -110.2,
-      "pnl_pct": -2.23,
+      "current": 237.66,
+      "pnl": -184.4,
+      "pnl_pct": -3.74,
       "stop": 229.6,
       "target": 271.57
     }
@@ -142,17 +142,17 @@
   "orders": [
     {
       "action": "SELL",
-      "ticker": "UUUU",
-      "qty": 195,
-      "limit": 30.0,
+      "ticker": "LMT",
+      "qty": 7,
+      "limit": 710.55,
       "status": "new",
       "notes": "limit"
     },
     {
       "action": "SELL",
-      "ticker": "CCJ",
-      "qty": 40,
-      "limit": 145.0,
+      "ticker": "UUUU",
+      "qty": 195,
+      "limit": 30.0,
       "status": "new",
       "notes": "limit"
     },
@@ -201,14 +201,6 @@
       "ticker": "AVAV",
       "qty": 24,
       "limit": 205.0,
-      "status": "new",
-      "notes": "limit"
-    },
-    {
-      "action": "BUY",
-      "ticker": "LMT",
-      "qty": 7,
-      "limit": 661.37,
       "status": "new",
       "notes": "limit"
     }
