@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-04T15:34:35.957556-06:00",
+  "updated": "2026-03-04T16:00:12.985897-06:00",
   "regime": {
     "label": "RANGE-BOUND",
     "composite_raw": 0.1,
@@ -40,12 +40,12 @@
     }
   },
   "portfolio": {
-    "equity": 99073.23,
+    "equity": 99081.04,
     "cash": 56730.7,
-    "deployed": 42574.91,
+    "deployed": 42582.75,
     "day_pnl": 0.0,
     "day_pnl_pct": 0.0,
-    "total_pnl": -926.77,
+    "total_pnl": -918.96,
     "high_watermark": 100000,
     "inception": "2026-02-27"
   },
@@ -55,9 +55,9 @@
       "strategy": "Unknown",
       "shares": 0.013482,
       "entry": 73820.5,
-      "current": 73254.69,
-      "pnl": -7.63,
-      "pnl_pct": -0.77,
+      "current": 73299.7,
+      "pnl": -7.02,
+      "pnl_pct": -0.7,
       "stop": 68653.07,
       "target": 81202.55
     },
@@ -88,9 +88,9 @@
       "strategy": "Unknown",
       "shares": 4,
       "entry": 472.34,
-      "current": 471.5,
-      "pnl": -3.36,
-      "pnl_pct": -0.18,
+      "current": 472.36,
+      "pnl": 0.08,
+      "pnl_pct": 0.0,
       "stop": 439.28,
       "target": 519.57
     },
@@ -99,9 +99,9 @@
       "strategy": "Unknown",
       "shares": 13,
       "entry": 374.59,
-      "current": 369.0,
-      "pnl": -72.61,
-      "pnl_pct": -1.49,
+      "current": 369.11,
+      "pnl": -71.18,
+      "pnl_pct": -1.46,
       "stop": 348.75,
       "target": 412.5
     },
@@ -110,9 +110,9 @@
       "strategy": "Unknown",
       "shares": 7,
       "entry": 661.34,
-      "current": 663.67,
-      "pnl": 16.31,
-      "pnl_pct": 0.35,
+      "current": 663.15,
+      "pnl": 12.67,
+      "pnl_pct": 0.27,
       "stop": 615.05,
       "target": 727.47
     },
@@ -121,9 +121,9 @@
       "strategy": "Unknown",
       "shares": 95,
       "entry": 50.42,
-      "current": 47.89,
-      "pnl": -240.68,
-      "pnl_pct": -5.02,
+      "current": 48.14,
+      "pnl": -217.09,
+      "pnl_pct": -4.53,
       "stop": 46.96,
       "target": 55.54
     },
@@ -132,9 +132,9 @@
       "strategy": "Unknown",
       "shares": 10.721393,
       "entry": 93.02,
-      "current": 92.77,
-      "pnl": -2.68,
-      "pnl_pct": -0.27,
+      "current": 92.58,
+      "pnl": -4.72,
+      "pnl_pct": -0.47,
       "stop": 86.51,
       "target": 102.32
     },
@@ -176,9 +176,9 @@
       "strategy": "Defense (Bonds)",
       "shares": 54,
       "entry": 89.78,
-      "current": 89.01,
-      "pnl": -41.58,
-      "pnl_pct": -0.86,
+      "current": 88.97,
+      "pnl": -43.74,
+      "pnl_pct": -0.9,
       "stop": 87.0,
       "target": 95.0
     },
@@ -198,9 +198,9 @@
       "strategy": "Unknown",
       "shares": 20,
       "entry": 246.88,
-      "current": 251.55,
-      "pnl": 93.33,
-      "pnl_pct": 1.89,
+      "current": 251.0,
+      "pnl": 82.4,
+      "pnl_pct": 1.67,
       "stop": 229.6,
       "target": 271.57
     },
@@ -209,14 +209,22 @@
       "strategy": "Unknown",
       "shares": 85,
       "entry": 55.87,
-      "current": 56.32,
-      "pnl": 38.19,
-      "pnl_pct": 0.8,
+      "current": 56.29,
+      "pnl": 35.7,
+      "pnl_pct": 0.75,
       "stop": 51.96,
       "target": 61.46
     }
   ],
   "orders": [
+    {
+      "action": "BUY",
+      "ticker": "CACI",
+      "qty": 8,
+      "limit": 625.8,
+      "status": "accepted",
+      "notes": "limit"
+    },
     {
       "action": "SELL",
       "ticker": "CRV/USD",
