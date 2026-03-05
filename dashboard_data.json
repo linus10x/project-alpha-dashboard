@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-05T08:30:11.650861-06:00",
+  "updated": "2026-03-05T09:02:15.058360-06:00",
   "regime": {
     "label": "RANGE-BOUND",
     "composite_raw": 0.1,
@@ -40,24 +40,46 @@
     }
   },
   "portfolio": {
-    "equity": 98726.89,
-    "cash": 56544.8,
-    "deployed": 42354.05,
+    "equity": 99033.41,
+    "cash": 32083.5,
+    "deployed": 67244.42,
     "day_pnl": 0.0,
     "day_pnl_pct": 0.0,
-    "total_pnl": -1273.11,
+    "total_pnl": -966.59,
     "high_watermark": 100000,
     "inception": "2026-02-27"
   },
   "positions": [
     {
+      "ticker": "AMZN",
+      "strategy": "Unknown",
+      "shares": 23,
+      "entry": 217.6,
+      "current": 219.07,
+      "pnl": 33.71,
+      "pnl_pct": 0.67,
+      "stop": 202.37,
+      "target": 239.36
+    },
+    {
+      "ticker": "CACI",
+      "strategy": "Unknown",
+      "shares": 8,
+      "entry": 618.81,
+      "current": 620.5,
+      "pnl": 13.52,
+      "pnl_pct": 0.27,
+      "stop": 575.49,
+      "target": 680.69
+    },
+    {
       "ticker": "EPD",
       "strategy": "Unknown",
       "shares": 133,
       "entry": 36.89,
-      "current": 37.17,
-      "pnl": 37.24,
-      "pnl_pct": 0.76,
+      "current": 37.52,
+      "pnl": 83.79,
+      "pnl_pct": 1.71,
       "stop": 34.31,
       "target": 40.58
     },
@@ -66,20 +88,31 @@
       "strategy": "Unknown",
       "shares": 0.463953,
       "entry": 2130.1,
-      "current": 2117.2,
-      "pnl": -5.99,
-      "pnl_pct": -0.61,
+      "current": 2118.58,
+      "pnl": -5.34,
+      "pnl_pct": -0.54,
       "stop": 1980.99,
       "target": 2343.11
+    },
+    {
+      "ticker": "GDX",
+      "strategy": "Unknown",
+      "shares": 46,
+      "entry": 102.88,
+      "current": 103.47,
+      "pnl": 26.91,
+      "pnl_pct": 0.57,
+      "stop": 95.68,
+      "target": 113.17
     },
     {
       "ticker": "GLD",
       "strategy": "Unknown",
       "shares": 4,
       "entry": 472.34,
-      "current": 470.26,
-      "pnl": -8.32,
-      "pnl_pct": -0.44,
+      "current": 470.06,
+      "pnl": -9.13,
+      "pnl_pct": -0.48,
       "stop": 439.28,
       "target": 519.57
     },
@@ -88,9 +121,9 @@
       "strategy": "Unknown",
       "shares": 13,
       "entry": 374.59,
-      "current": 365.0,
-      "pnl": -124.6,
-      "pnl_pct": -2.56,
+      "current": 366.08,
+      "pnl": -110.51,
+      "pnl_pct": -2.27,
       "stop": 348.75,
       "target": 412.5
     },
@@ -99,9 +132,9 @@
       "strategy": "Unknown",
       "shares": 7,
       "entry": 661.34,
-      "current": 658.98,
-      "pnl": -16.52,
-      "pnl_pct": -0.36,
+      "current": 657.27,
+      "pnl": -28.45,
+      "pnl_pct": -0.61,
       "stop": 615.05,
       "target": 727.47
     },
@@ -110,20 +143,31 @@
       "strategy": "Unknown",
       "shares": 17.515364,
       "entry": 56.6,
-      "current": 55.94,
-      "pnl": -11.54,
-      "pnl_pct": -1.16,
+      "current": 55.88,
+      "pnl": -12.64,
+      "pnl_pct": -1.27,
       "stop": 52.64,
       "target": 62.26
+    },
+    {
+      "ticker": "MSFT",
+      "strategy": "Unknown",
+      "shares": 12,
+      "entry": 406.8,
+      "current": 410.64,
+      "pnl": 46.14,
+      "pnl_pct": 0.95,
+      "stop": 378.32,
+      "target": 447.47
     },
     {
       "ticker": "SLB",
       "strategy": "Unknown",
       "shares": 95,
       "entry": 50.42,
-      "current": 47.53,
-      "pnl": -274.88,
-      "pnl_pct": -5.74,
+      "current": 47.58,
+      "pnl": -270.61,
+      "pnl_pct": -5.65,
       "stop": 46.96,
       "target": 55.54
     },
@@ -132,9 +176,9 @@
       "strategy": "Unknown",
       "shares": 2,
       "entry": 1.68,
-      "current": 2.0,
-      "pnl": 64.0,
-      "pnl_pct": 19.05,
+      "current": 1.45,
+      "pnl": -46.0,
+      "pnl_pct": -13.69,
       "stop": 1.56,
       "target": 1.85
     },
@@ -143,9 +187,9 @@
       "strategy": "Unknown",
       "shares": 2,
       "entry": 1.75,
-      "current": 2.09,
-      "pnl": 68.0,
-      "pnl_pct": 19.43,
+      "current": 1.52,
+      "pnl": -46.0,
+      "pnl_pct": -13.14,
       "stop": 1.63,
       "target": 1.93
     },
@@ -154,9 +198,9 @@
       "strategy": "Unknown",
       "shares": -1,
       "entry": 13.32,
-      "current": 9.93,
-      "pnl": 339.0,
-      "pnl_pct": 25.45,
+      "current": 8.89,
+      "pnl": 443.0,
+      "pnl_pct": 33.26,
       "stop": 12.39,
       "target": 14.65
     },
@@ -165,9 +209,9 @@
       "strategy": "Defense (Bonds)",
       "shares": 54,
       "entry": 89.78,
-      "current": 88.63,
-      "pnl": -62.29,
-      "pnl_pct": -1.29,
+      "current": 88.68,
+      "pnl": -59.4,
+      "pnl_pct": -1.23,
       "stop": 87.0,
       "target": 95.0
     },
@@ -176,9 +220,9 @@
       "strategy": "Unknown",
       "shares": 195,
       "entry": 21.15,
-      "current": 21.34,
-      "pnl": 38.05,
-      "pnl_pct": 0.92,
+      "current": 21.33,
+      "pnl": 35.61,
+      "pnl_pct": 0.86,
       "stop": 19.67,
       "target": 23.26
     },
@@ -187,20 +231,31 @@
       "strategy": "Unknown",
       "shares": 20,
       "entry": 246.88,
-      "current": 247.69,
-      "pnl": 16.2,
-      "pnl_pct": 0.33,
+      "current": 257.89,
+      "pnl": 220.3,
+      "pnl_pct": 4.46,
       "stop": 229.6,
       "target": 271.57
+    },
+    {
+      "ticker": "WMB",
+      "strategy": "Unknown",
+      "shares": 65,
+      "entry": 75.26,
+      "current": 75.61,
+      "pnl": 22.67,
+      "pnl_pct": 0.46,
+      "stop": 69.99,
+      "target": 82.79
     },
     {
       "ticker": "XLE",
       "strategy": "Unknown",
       "shares": 85,
       "entry": 55.87,
-      "current": 56.52,
-      "pnl": 55.25,
-      "pnl_pct": 1.16,
+      "current": 56.71,
+      "pnl": 71.4,
+      "pnl_pct": 1.5,
       "stop": 51.96,
       "target": 61.46
     },
@@ -209,51 +264,51 @@
       "strategy": "Unknown",
       "shares": 697.552448,
       "entry": 1.42,
-      "current": 1.42,
-      "pnl": 1.32,
-      "pnl_pct": 0.13,
+      "current": 1.44,
+      "pnl": 11.99,
+      "pnl_pct": 1.21,
       "stop": 1.32,
       "target": 1.56
     }
   ],
   "orders": [
     {
-      "action": "BUY",
-      "ticker": "GDX",
-      "qty": 46,
-      "limit": 106.72,
-      "status": "new",
-      "notes": "limit"
-    },
-    {
-      "action": "BUY",
-      "ticker": "CACI",
-      "qty": 8,
-      "limit": 625.8,
-      "status": "new",
-      "notes": "limit"
-    },
-    {
-      "action": "BUY",
+      "action": "SELL",
       "ticker": "AMZN",
       "qty": 23,
-      "limit": 219.0,
+      "limit": 240.9,
       "status": "new",
       "notes": "limit"
     },
     {
-      "action": "BUY",
-      "ticker": "WMB",
-      "qty": 65,
-      "limit": 76.5,
-      "status": "new",
-      "notes": "limit"
-    },
-    {
-      "action": "BUY",
+      "action": "SELL",
       "ticker": "MSFT",
       "qty": 12,
-      "limit": 408.0,
+      "limit": 448.8,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "SELL",
+      "ticker": "GDX",
+      "qty": 46,
+      "limit": 116.8,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "SELL",
+      "ticker": "CACI",
+      "qty": 8,
+      "limit": 686.37,
+      "status": "new",
+      "notes": "limit"
+    },
+    {
+      "action": "SELL",
+      "ticker": "WMB",
+      "qty": 65,
+      "limit": 84.15,
       "status": "new",
       "notes": "limit"
     },
@@ -576,7 +631,7 @@
       "change_pct": 0.0
     },
     "VIX": {
-      "price": 23.57,
+      "price": 21.15,
       "change_pct": null
     },
     "GLD": {
