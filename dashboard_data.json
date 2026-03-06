@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-06T08:00:12.037461-06:00",
+  "updated": "2026-03-06T08:30:12.551579-06:00",
   "regime": {
     "label": "RANGE-BOUND",
     "composite_raw": 0.1,
@@ -40,12 +40,12 @@
     }
   },
   "portfolio": {
-    "equity": 98251.71,
-    "cash": 58072.83,
-    "deployed": 40809.46,
+    "equity": 98499.15,
+    "cash": 59964.26,
+    "deployed": 39159.75,
     "day_pnl": 0.0,
     "day_pnl_pct": 0.0,
-    "total_pnl": -1748.29,
+    "total_pnl": -1500.85,
     "high_watermark": 100000,
     "inception": "2026-02-27"
   },
@@ -55,9 +55,9 @@
       "strategy": "Unknown",
       "shares": -425,
       "entry": 11.76,
-      "current": 11.37,
-      "pnl": 165.75,
-      "pnl_pct": 3.32,
+      "current": 11.3,
+      "pnl": 193.38,
+      "pnl_pct": 3.87,
       "stop": 10.94,
       "target": 12.94
     },
@@ -66,9 +66,9 @@
       "strategy": "Unknown",
       "shares": 23,
       "entry": 217.6,
-      "current": 214.55,
-      "pnl": -70.24,
-      "pnl_pct": -1.4,
+      "current": 215.92,
+      "pnl": -38.74,
+      "pnl_pct": -0.77,
       "stop": 202.37,
       "target": 239.36
     },
@@ -77,22 +77,11 @@
       "strategy": "Unknown",
       "shares": 14,
       "entry": 333.93,
-      "current": 325.5,
-      "pnl": -118.0,
-      "pnl_pct": -2.52,
+      "current": 331.06,
+      "pnl": -40.11,
+      "pnl_pct": -0.86,
       "stop": 310.55,
       "target": 367.32
-    },
-    {
-      "ticker": "BTCUSD",
-      "strategy": "Unknown",
-      "shares": 0.027541,
-      "entry": 71007.7,
-      "current": 69214.1,
-      "pnl": -49.4,
-      "pnl_pct": -2.53,
-      "stop": 66037.16,
-      "target": 78108.47
     },
     {
       "ticker": "CACI",
@@ -110,9 +99,9 @@
       "strategy": "Unknown",
       "shares": 133,
       "entry": 36.89,
-      "current": 37.35,
-      "pnl": 61.18,
-      "pnl_pct": 1.25,
+      "current": 37.44,
+      "pnl": 72.48,
+      "pnl_pct": 1.48,
       "stop": 34.31,
       "target": 40.58
     },
@@ -121,9 +110,9 @@
       "strategy": "Unknown",
       "shares": 12,
       "entry": 406.8,
-      "current": 406.31,
-      "pnl": -5.82,
-      "pnl_pct": -0.12,
+      "current": 411.04,
+      "pnl": 50.94,
+      "pnl_pct": 1.04,
       "stop": 378.32,
       "target": 447.47
     },
@@ -132,9 +121,9 @@
       "strategy": "Unknown",
       "shares": 30,
       "entry": 162.3,
-      "current": 159.79,
-      "pnl": -75.3,
-      "pnl_pct": -1.55,
+      "current": 164.46,
+      "pnl": 64.8,
+      "pnl_pct": 1.33,
       "stop": 150.94,
       "target": 178.53
     },
@@ -143,9 +132,9 @@
       "strategy": "Unknown",
       "shares": 1,
       "entry": 1.68,
-      "current": 2.01,
-      "pnl": 33.0,
-      "pnl_pct": 19.64,
+      "current": 4.14,
+      "pnl": 246.0,
+      "pnl_pct": 146.43,
       "stop": 1.56,
       "target": 1.85
     },
@@ -154,9 +143,9 @@
       "strategy": "Unknown",
       "shares": 1,
       "entry": 1.75,
-      "current": 2.1,
-      "pnl": 35.0,
-      "pnl_pct": 20.0,
+      "current": 4.3,
+      "pnl": 255.0,
+      "pnl_pct": 145.71,
       "stop": 1.63,
       "target": 1.93
     },
@@ -165,9 +154,9 @@
       "strategy": "Unknown",
       "shares": -1,
       "entry": 13.32,
-      "current": 10.48,
-      "pnl": 284.0,
-      "pnl_pct": 21.32,
+      "current": 14.85,
+      "pnl": -153.0,
+      "pnl_pct": -11.49,
       "stop": 12.39,
       "target": 14.65
     },
@@ -176,9 +165,9 @@
       "strategy": "Defense (Bonds)",
       "shares": 54,
       "entry": 89.78,
-      "current": 88.69,
-      "pnl": -58.86,
-      "pnl_pct": -1.21,
+      "current": 88.33,
+      "pnl": -78.3,
+      "pnl_pct": -1.62,
       "stop": 87.0,
       "target": 95.0
     },
@@ -187,9 +176,9 @@
       "strategy": "Unknown",
       "shares": 65,
       "entry": 75.26,
-      "current": 75.65,
-      "pnl": 25.35,
-      "pnl_pct": 0.52,
+      "current": 74.9,
+      "pnl": -23.4,
+      "pnl_pct": -0.48,
       "stop": 69.99,
       "target": 82.79
     },
@@ -198,9 +187,9 @@
       "strategy": "Unknown",
       "shares": 85,
       "entry": 55.87,
-      "current": 57.2,
-      "pnl": 113.05,
-      "pnl_pct": 2.38,
+      "current": 56.92,
+      "pnl": 89.67,
+      "pnl_pct": 1.89,
       "stop": 51.96,
       "target": 61.46
     },
@@ -209,9 +198,9 @@
       "strategy": "Unknown",
       "shares": -97,
       "entry": 51.23,
-      "current": 50.5,
-      "pnl": 70.81,
-      "pnl_pct": 1.43,
+      "current": 50.48,
+      "pnl": 72.75,
+      "pnl_pct": 1.46,
       "stop": 47.64,
       "target": 56.35
     },
@@ -220,22 +209,14 @@
       "strategy": "Unknown",
       "shares": 33,
       "entry": 150.5,
-      "current": 152.82,
-      "pnl": 76.56,
-      "pnl_pct": 1.54,
+      "current": 152.78,
+      "pnl": 75.24,
+      "pnl_pct": 1.52,
       "stop": 139.97,
       "target": 165.55
     }
   ],
   "orders": [
-    {
-      "action": "SELL",
-      "ticker": "BTC/USD",
-      "qty": 0,
-      "limit": 68600.0,
-      "status": "new",
-      "notes": "stop_limit"
-    },
     {
       "action": "BUY",
       "ticker": "XLF",
@@ -496,15 +477,15 @@
   "market": {
     "SPY": {
       "price": 681.31,
-      "change_pct": -0.56
+      "change_pct": 0.0
     },
     "QQQ": {
       "price": 608.91,
-      "change_pct": -0.3
+      "change_pct": 0.0
     },
     "IWM": {
       "price": 256.76,
-      "change_pct": -1.91
+      "change_pct": 0.0
     },
     "VIX": {
       "price": 21.15,
@@ -512,15 +493,15 @@
     },
     "GLD": {
       "price": 466.13,
-      "change_pct": -1.2
+      "change_pct": 0.0
     },
     "TLT": {
       "price": 88.79,
-      "change_pct": -0.4
+      "change_pct": 0.0
     },
     "HYG": {
       "price": 80.08,
-      "change_pct": -0.4
+      "change_pct": 0.0
     }
   },
   "geo_alert": {
